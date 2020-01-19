@@ -1,0 +1,120 @@
+
+
+nav {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #DD5555;
+    justify-content: center;
+    align-items: center;
+}
+.logo {
+    margin: 1rem;
+}
+.logo img {
+    width: 100%;
+    
+}
+.nav-list {
+    list-style: none;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+}
+
+.nav-items {
+    padding: .4rem;
+}
+.nav-items a {
+    text-decoration: none;
+    color: white;
+}
+.nav-items a:hover{
+    color: rgb(215, 218, 74);
+
+}
+
+.hero {
+    background-image: url(/Canvas/about.jpg.png);
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+
+}
+.hero-Container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.hero-text{
+    color: white;
+    border-bottom: 1px solid white;
+}
+.hero-buttons {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.hero-button{
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    color: grey;
+    text-decoration: none;
+    margin: 1rem 0rem;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.article {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 10rem;
+
+}
+.imgContainer {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #DD5555;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:50%;
+    padding: 1rem;
+    
+    
+
+}
+
+.fork {
+    background-image: url(/Canvas/fork-and-knife-silhouette.svg);
+}
+.bed {
+    background-image: url(/Canvas/bed.svg);
+}
+.fire {
+    background-image: url(/Canvas/fire-symbol.svg);
+}
+.leaf {
+    background-image: url(/Canvas/plant-leaf-with-white-details.svg);
+}
+.umbrella {
+    background-image: url(/Canvas/umbrella-black-silhouette.svg);
+}
+.dollar {
+    background-image: url(/Canvas/dollar-symbol.svg);
+}

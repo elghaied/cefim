@@ -1,0 +1,179 @@
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+
+}
+h1 {
+    font-size: 4.3rem;
+}
+p {
+    font-size: 2rem;
+    
+}
+.container > * {
+    padding: 2rem;
+    font-family: Avenir Book;
+    color: #707070;
+    
+}
+a {
+    font-family: Avenir Book;
+    text-decoration: none;
+    color:#707070;
+}
+.container {
+    display:grid;
+    min-width: 80vh;
+    min-height: 80vh;
+    grid-template-columns: 3fr 1fr 46.6rem 1fr ;
+    grid-template-rows: 1fr auto 1fr;
+    grid-template-areas: 
+    'aside . . login'
+    'aside . form .'
+    'aside signup signup signup';
+}
+aside {
+    background-image: url('../img/photo.png');
+    background-size: cover;
+    grid-area: aside;
+    min-width: 58.0rem;
+    min-height: 86.0rem;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: login;
+
+}
+.form {
+    display: grid;
+    justify-content: center;
+    grid-area: form;
+    min-width: 46.6rem;
+    min-height: auto;
+    grid-gap: 2rem;
+
+}
+.label_container {
+    position: relative;
+    display: flex;
+}
+.label_container label {
+    position:absolute;
+    font-size: 1.4rem;
+    color: #707070;
+    opacity: 0.5;
+    margin-left: 3.16rem;
+    margin-top:0.82rem;
+    letter-spacing: 0.7;
+}
+input {
+    padding-top:0.82rem;
+    padding-left:3.16rem;
+    min-width: 46.6rem;
+    min-height: 8.0rem;
+    box-shadow:initial 0px 12px 40px #00000014;
+    
+
+}
+#username {
+    box-shadow: 0px 12px 40px #00000014;
+
+
+}
+input:focus  {
+    border-left: 0.6rem solid #FF5A87;
+    transition: .3 ;
+
+}
+label.forget{
+    right:3.7rem;
+    align-self: center;
+}
+.login-btn {
+    display: flex;
+    justify-self: flex-end;
+    min-width:11.3rem;
+    height: 2.9rem;
+    background-image: url(/img/submit.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    background-color: #fff;
+    font-size: 2.4rem;
+    color: #707070;
+    padding-right: 4.4rem ;
+    align-items: center;
+    font-family: Avenir black;
+    
+    
+}
+
+.signup {
+    grid-area: signup;
+    display: flex;
+    align-items: flex-end;
+    
+}
+
+@media screen and (max-width: 75rem) {
+    html {
+        font-size: 8px;
+    }
+
+}
+
+@media screen and (max-width: 60rem) {
+    html {
+        font-size: 6px;
+    }
+
+}
+
+@media screen and (max-width: 47rem) {
+    html {
+        font-size: 4px;
+    }
+
+    aside {
+        background-position: center;
+    }
+
+}
+
+@media screen and (max-width: 36.5rem) {
+    .container {
+      
+        grid-template-columns:  1fr 46.6rem 1fr ;
+        grid-template-rows: 1fr auto auto auto;
+        grid-row: auto;
+        grid-template-areas: 
+        'aside aside aside'
+        '. login . '
+        '. form .'
+        ' . signup . ';
+    }
+    .signup {
+        
+        justify-content: start;
+
+}
+    .login {
+        justify-content: end;
+        
+    }
+    .form {
+        width:auto;
+    }
+    aside {
+        min-width: auto;
+        
+    }
+}

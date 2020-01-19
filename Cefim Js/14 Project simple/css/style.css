@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen&display=swap');
+
+body {
+    padding:0;
+    margin: 0;
+}
+/* ["orange","red","blue","purple","darkgreen","lemoni","blood","darkblue"]; */
+
+/* buttons library */
+.orange {
+    background-color: #f88800;
+    border: 2px solid #40b0e0;
+}
+.red {
+    background-color: #c80000;
+    border: 2px solid #a860c8;
+}
+.blue {
+    background-color: #0070a8;
+    border: 2px solid #98c800;
+}
+.purple {
+    background-color: #7010a8;
+    border: 2px solid #f8b840;
+}
+.darkgreen {
+    background-color: #407000;
+    border: 2px solid #f84040;
+}
+.lemoni {
+    background-color: #d86000;
+    border: 2px solid #0098c8;
+}
+.blood {
+    background-color: #a80000;
+    border: 2px solid #9830c8;
+}
+.darkblue {
+    background-color: #609800;
+    border: 1px solid #005088;
+
+}
+
+.container {
+    padding: 4rem;
+    position: relative;
+
+}
+.inputRow {
+    display:flex;
+    justify-content: center;
+    padding-right:4rem;
+    padding-left:4rem;
+    flex-wrap: wrap;
+}
+.row {
+    display:flex;
+    justify-content: center;
+    padding-right:4rem;
+    padding-left:4rem;
+    flex-wrap: wrap;
+}
+.items {
+    padding: 0rem 2rem;
+    padding-bottom: 1rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    color:white;
+    font-family: 'Oxygen', sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    max-width: 5rem;
+}
+
+.btn-ok {
+    padding: 1rem 2rem;
+    border-radius: .8rem;
+    margin-left:1rem;
+}
+
+/* Icons */
+
+.delete {
+    position: absolute;
+    width: 1rem;
+    right: 1px;
+    top: 1px;
+    visibility: hidden;
+    
+}
+
+.modify {
+    position: absolute;
+    width: 1rem;
+    left: 2px;
+    top: 2px;
+    visibility: hidden;
+}
+.expand {
+    position: absolute;
+    width: 1rem;
+    right: 2px;
+    bottom: 2px;
+    visibility: hidden;
+}
+
+.modfiytext {
+    width : 100%;
+}
+.like {
+    position:absolute;
+    bottom: 1px;
+    width:1rem;
+    right: 1.5rem;
+    visibility: hidden;
+}
+.dislike {
+    position:absolute;
+    bottom: 1px;
+    width:1rem;
+    left: 1.5rem;
+    visibility: hidden;
+}
+.dislike img,  .like img {
+    max-width: 1rem;
+    
+}
+.visited {
+    position:absolute;
+    
+    bottom: 1px;
+    width:1rem;
+    left: 2px;
+    visibility: hidden;
+}
+p {
+    word-wrap: break-word;
+}
+
+.modal {
+    position: absolute;
+    width: 0vh;
+    height: 0vh;
+    background-color: #3a8ad4;
+    border: 1px solid black;
+    transition: 1s;
+    z-index: 10;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 40vh;
+    
+}
+
+
+/* comment section */
+
+.close {
+    max-width:1.2rem;
+    position: absolute;
+    right:.5rem;
+    top:.5rem;
+
+}
+
+.close:hover {
+    background-color: rgba(255, 255, 255, 0.767);
+    padding: .3rem;
+    border-radius: 25px ;
+}
+
+.post {
+    margin-bottom: 4rem;
+    width:0vh;
+    min-height: 5rem;
+    background-color: #7010a8;
+    margin-top: 2rem;
+    transition: 1s;
+    word-wrap: break-word;
+    overflow: hidden;
+    
+    
+    
+}
+.comment_container {
+    background-color: #d86000;
+    display: grid;
+    grid-template-areas: "user . ."
+    "comment . button";
+    padding: 2rem;
+    gap: .5rem;
+    width: 0vw;
+    transition: 1s;
+}
+.comment_user {
+    background-color: #98c800;
+    grid-area: user;
+    width: 0vw;
+    transition: 1s;
+
+}
+.comment_text {
+    background-color: #c80000;
+    grid-area: comment;
+    width: 0vw;
+    transition: 1s;
+}
+.comment_button {
+    grid-area: button;
+    transition: 1s;
+}
+
+.comment_area {
+    background-color: #005088;
+    width:0vw;
+    transition: 1s;
+    
+}
+.new_comment {
+    background-color: darkorchid;
+    margin: 1rem;
+    padding: 1rem 1rem;
+    min-height: 2rem;
+    position: relative;
+    transition: 1s;
+    
+    
+}
+
+.username {
+    
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+    transition: 1s;
+
+}

@@ -1,0 +1,40 @@
+
+@import 'partials/_base';
+@import 'partials/variables';
+@import 'partials/button';
+@import 'partials/extends';
+@import 'partials/mixins';
+
+
+body {
+    background-color:$secondry_color;
+    color:#fff;
+}
+nav {
+    @include center_containers();
+}
+ul {
+    @include flex_list(end);
+    @media screen and (max-width:600px) {
+        flex-direction:column;
+    }
+}
+
+.nav_items {
+    
+    @include wide_button($primary_color,$nav_padding );
+    @media screen and (max-width:600px) {
+        width:100%;
+    }
+    a {
+        @include text_coloring();
+    }
+}
+
+.container {
+    @include flex_list(center);
+    flex-direction: column;
+    @include center_containers();
+    
+}
+

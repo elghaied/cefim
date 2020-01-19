@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Java script</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <button class="button_wide" id="dollar_converter" onclick="dollar()">Converte euro a dollar</button>
+    </div>
+
+    <div class="container">
+        <button class="button_wide" id="surface" onclick="my_surface()">surface</button>
+        <div class="container" id="surface_result">
+            
+        </div> 
+    </div>
+
+    <div class="container">
+
+    
+        <p>Please select your temperature measurement:</p>
+
+        <div>
+                <input type="radio" id="c" name="temp" value="Celsius" checked> 
+                <label for="c">Celsius</label>
+                </div>
+        <div>
+                <input type="radio" id="k" name="temp" value="Kelvin"> 
+            <label for="k">Kelvin</label>
+            </div>
+
+            <div>
+                    <input type="radio" id="f" name="temp" value="Fahrenheit">
+                <label for="f">Fahrenheit</label>
+                </div>
+
+
+        
+        
+        <p>Please select the temperature:</p>
+        <input type="text" id="intemp" ></input>
+        
+        <button class="button_wide" onclick="my_tempo()">result</button>
+        
+        <div id="tempo_results"></div>
+
+    </div>
+    <script src="/js/javascript.js"></script>
+</body>
+</html>

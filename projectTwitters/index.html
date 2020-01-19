@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <title>append</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="" class="nav-items">Home</a>
+            <a href="" class="nav-items">Trending</a>
+            <a href="" class="nav-items">Top comments</a>
+            <a href="" class="nav-items">influenceurs</a>
+            <a href="" class="nav-items">contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="inputRow">
+        <input id="inUser" type="text" placeholder="User Name">
+        <input id="inData" type="text" placeholder="enter your text">
+         <button type="button" class="lemoni btn-ok" id="go">Enter</button>
+        </div>
+        <div class="row">
+           <div class="left-col" id="results">
+             <div id="spinner">
+            <img src="/img/spinner.svg" alt="">
+            <h2>Loading . . . </h2>
+             </div>
+           </div>
+           <div class="right-col">
+               
+               <div id="trends">
+                   <span class="title">Trending</span> 
+                   
+               </div>
+               <div id="influenceurs">
+                    <span class="title">influenceurs</span>  
+
+               </div>
+           </div>
+        </div>
+    <div class="modal">
+        <img src="img/close.png" alt="" class="close">
+        <div class="post"></div>
+        <div class="comment_container">
+            <input type="text" class="comment_user" placeholder="User Name">
+            <textarea class="comment_text" name="" id="" cols="30" rows="10"></textarea>
+            <button type="button" class="comment_button">Submit</button>
+        </div>
+        <div class="comment_area">
+           
+        </div>
+    </div>
+</div>
+
+
+
+<script src="javascript/javascript.js"></script>
+
+</body>
+</html>

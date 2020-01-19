@@ -1,0 +1,24 @@
+.delete {
+    position: absolute;
+    max-width: 1rem;
+    right: 1px;
+    top: 1px;
+    visibility: hidden;
+    
+}
+
+.modify {
+    position: absolute;
+    max-width: 1rem;
+    left: 1px;
+    top: 1px;
+    visibility: hidden;
+}
+
+.modfiytext {
+    width : 100%;
+}
+
+p {
+    word-wrap: break-word;
+}

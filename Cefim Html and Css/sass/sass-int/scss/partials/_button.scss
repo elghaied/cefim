@@ -1,0 +1,30 @@
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid $secondary;
+    background-color: $secondary;
+    border-radius: $rounded;
+    color:#fff;
+    @extend %shadow;
+    span{
+        color:#000;
+
+    }
+    &:hover, &:focus {
+        background-color:#0f0;
+
+    }
+    &.btn-lg{
+        padding:20px 40px;
+    }
+    @media (max-width: 600px){
+        width:100%;
+    
+    }
+    .dark & {
+        background-color:#fff;
+        color:#000;
+
+    }
+
+}

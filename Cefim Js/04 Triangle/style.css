@@ -1,0 +1,75 @@
+body{
+    padding-top:200px;
+    padding-bottom: 200px;
+}
+.container {
+    display: flex;
+    flex-direction:row ;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: -30px;
+}
+
+.container ~ .container {
+    margin-top: -30px;
+}
+
+.leaf_right, .leaf_left {
+    margin-left: -60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.leaf_left img{
+    max-height: 100px;
+    transform: rotate(150deg)
+}
+
+.leaf_right img{
+    max-height: 100px;
+   
+    
+    
+}
+
+
+.left {
+    max-height: 100px;
+    transform: rotatey(180deg);
+    margin-right: 24px;
+}
+
+.right {
+    max-height: 100px;
+    margin-left: -40px;
+   
+
+
+}
+
+.star_container {
+
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.star {
+    max-width: 100px ;
+
+}
+
+.trunk {
+    max-height: 1000px;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 250px;
+    z-index: -1;
+
+}

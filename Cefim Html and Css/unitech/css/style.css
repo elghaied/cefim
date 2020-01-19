@@ -1,0 +1,20 @@
+.logo {
+    max-width:calc(100% - 4.5rem);
+}
+
+.hero {
+    background-image: url(/img/hero.jpg);
+
+    background-repeat: no-repeat;
+    background-size: cover ;
+    background-position: center center;
+}
+.hero .row {
+    min-height: 80vh;
+}
+.join-us {
+    background-image: url(/img/subscribe.jpg);
+    background-size: cover;
+    height: 30rem;
+}
+

@@ -1,0 +1,22 @@
+.items {
+    width:200px;
+    height: 100px;
+    background-color: yellowgreen;
+    border: 1px solid black;
+    grid-area: items;
+}
+
+.container {
+    border: 2px solid black;
+    grid-template-rows: repeat(1fr);
+    grid-template-columns: ;
+    grid-template-areas: 
+    ". items . "
+    ". items . "
+    ". items . "
+    ". items . "
+    ". items . "
+    ". items . "
+    ". items . ";
+}
+

@@ -1,0 +1,44 @@
+.delete {
+    position: absolute;
+    max-width: 1rem;
+    right: 1px;
+    top: 1px;
+    visibility: hidden;
+    
+}
+
+.modify {
+    position: absolute;
+    max-width: 1rem;
+    left: 1px;
+    top: 1px;
+    visibility: hidden;
+}
+
+.modfiytext {
+    width : 100%;
+}
+
+p {
+    word-wrap: break-word;
+}
+
+#results {
+    display: grid;
+    border: 2px solid black;
+    grid-template-rows: repeat(1fr,7) ;
+    grid-template-columns: . 10% . ;
+    grid-template-areas: 
+    ". 10% . "
+    ". 20% . "
+    ". 30% . "
+    ". 40% . "
+    ". items . "
+    ". items . "
+    ". items . ";
+
+}
+
+.sheet {
+    grid-area: items;
+}

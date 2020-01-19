@@ -1,0 +1,24 @@
+Fonts 
+
+LATO
+Calligraffitti
+
+Colors 
+White
+#FFFFFF
+
+Blue
+#3693D6
+
+Sky
+#9BC0FF
+
+Light Grey
+#E2E2E2
+
+See More White Border
+#FFFFFF00
+
+Title Shadow
+#0000004D
+

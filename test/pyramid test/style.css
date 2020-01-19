@@ -1,0 +1,200 @@
+body{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    justify-content: center;
+    position: relative;
+}
+
+.sides {
+    display: grid;
+    grid-template-areas: ". right" "left .";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    transform: rotate(45deg);
+    border: 2px solid
+    black;
+    height: 300vh;
+    width: 300vh;
+    justify-self: center;
+    margin-top: -150vh;
+}
+.rightside {
+    grid-area: right;
+    border-bottom: 1px solid rgb(248, 252, 212);
+    background-color: red;
+    
+    box-shadow: 0px 20px 30px rgb(255, 255, 255);
+
+}
+
+/* to protect the sides when the screen hieght is too low  */
+.rightside:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:-150vh;
+    left:300vh;
+    z-index: -1;
+
+    /* background: url(/img/bgLeft.jpg) 0 0 repeat; */
+    background-color: red;
+    transform: rotate();
+}
+.leftside {
+    grid-area: left;
+    border-right: 4px solid rgba(0, 0, 0, 0.637);
+    background-color: rgb(42, 42, 240);
+    box-shadow: 20px 0px 30px rgba(14, 14, 14, 0.493);
+
+}
+/* to protect the sides when the screen hieght is too low  */
+
+.leftside:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(42, 42, 240);
+    left:-150vh;
+    z-index: -1;
+    /* background: url(/img/bgLeft.jpg) 0 0 repeat; */
+    transform: rotate();
+}
+
+
+
+.pyContainer {
+    
+    height: 100%;
+    width: 100%;
+    z-index: -10;
+    background-color: rgb(242, 247, 174);
+    display: flex;
+    flex-direction: column;
+  
+    /* grid-template-areas: 
+    ". . . . . . pyItem . . . . . ."
+    ". . . . . . pyItem pyItem . . . . ."
+    ". . . . . pyItem pyItem pyItem . . . . ."
+    ". . . . . pyItem pyItem pyItem pyItem . . . ."
+    ". . . . pyItem pyItem pyItem pyItem pyItem . . . ."
+    ". . . pyItem pyItem pyItem pyItem pyItem pyItem . . . ."
+    ". . . pyItem pyItem pyItem pyItem pyItem pyItem pyItem . . ."
+    ". . pyItem pyItem pyItem pyItem pyItem pyItem pyItem pyItem pyItem . ."; */
+    
+}
+.pyRows{
+    display: flex;
+    height: 100%;
+    
+}
+.pyItems {
+    grid-area: pyItem;
+    background-color: rgb(221, 191, 20);
+    border: 2px solid rgb(184, 142, 6);
+    color: white;
+    /* margin: 1rem; */
+
+}
+
+.formContainer {
+    left: 0;
+    height: 4rem;
+}
+.leftInfo {
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.categorize {
+    background-color: brown;
+    width: 10rem;
+    height: 4rem;
+    padding: 1rem;
+}
+.categorize a {
+    color: white;
+    text-decoration: none;
+    margin: .5rem;
+}
+
+.rightInfo {
+    width: 40%;
+    height: 100vh;
+    display: flex;
+
+    padding-right: 2rem;
+    padding-top: 2rem;
+    position: absolute;
+    display: flex;
+    justify-self: self-end;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.profile {
+    display: flex;
+    flex-direction: row;
+    max-height: 6rem;
+    justify-content: flex-start;
+    width: 90%;
+}
+
+.pic img{
+    max-height: 6rem;
+    border: 1px solid black;
+
+}
+
+
+  /* animation */
+  * {
+    font-family:'Lato';
+  }
+  
+  .scene {
+    width:10em;
+    height:10em;
+    margin:2em 10em;
+    perspective:10em;
+  }
+  
+  .cube {
+    width:100%;
+    height:100%;
+    position:relative;
+    animation: spinning 2s infinite;
+    transform-style:preserve-3d;
+  }
+  
+  @keyframes spinning {
+    from  { transform: translateZ(-5em) rotateY(0deg);   }
+    to    { transform: translateZ(-5em) rotateY(360deg); }
+  }
+  
+  .face {
+    width:100%;
+    height:100%;
+    position:absolute;
+    border:1px solid #333;
+    background-color:rgba(3, 121, 255, 0.5);
+    
+    color:#FFF;
+    line-height:10em;
+    text-align:center;
+  }
+  
+  .front  { transform: rotateY(0deg) translateZ(5em); }
+  .right  { transform: rotateY(90deg) translateZ(5em);  }
+  .left   { transform: rotateY(-90deg) translateZ(5em); }
+  .back   { transform: rotateY(180deg) translateZ(5em); }
+  .top    { transform: rotateX(90deg) translateZ(5em); }
+  .bottom { transform: rotateX(-90deg) translateZ(5em); }

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Langing</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Calligraffitti&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div id="mont"class="container">
+
+  <nav>
+    <img src="images/Logo.svg" alt="">
+    <div id="Nav_items_container">
+    <a class="Nav_items" href="#home">Home <span id="underline"></span> </a>
+    <a class="Nav_items" href="#about">About</a>
+    <a class="Nav_items" href="#contact">Contact</a>
+    <button type="button" name="button">Say Hello</button>
+    </div>
+
+    <a  onclick="mobile_menu()" id="Mobile" href="javascript:void(0);"> <img  src="images/mobile menu.svg" alt=""> </a>
+
+  </nav>
+
+    <div id="Header_text">
+    <h1>
+      Wonderful <br> <span>World</span>
+    </h1>
+     </div>
+     <button id="OurWork_Button" type="button" name="button">Our Work <img src="images/Icône flèche.svg" alt=""> </button>
+  </div>
+
+  <div id="aboutMe" class="container">
+    <h2>About Me</h2>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo</p>
+  </div>
+  <div id="OurWork" class="container">
+    <h2>Our Work</h2>
+
+    <div id="gallery">
+      <div id="photos1"><img src="images/cold-daylight-fjord-1586298@2x.png" alt=""></div>
+      <div id="photos2"><img src="images/adorable-animal-breed-434090@2x.png" alt=""></div>
+      <div id="photos3"><img src="images/action-active-cold-2433353@2x.png" alt="">
+      <div id="overly_text">
+        <h3>Fly High</h3>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo</p>
+        <button id="seeMore" type="button" name="button">See More</button>
+      </div>
+      </div>
+      <div id="photos4"><img src="images/adventure-adventurer-altitude-2577274@2x.png" alt=""></div>
+      <div id="photos5"><img src="images/beatiful-landscape-cold-colors-2832052@2x.png" alt=""></div>
+    </div>
+
+   <div id="Testimonial">
+     <h1>Testimonial</h1>
+     <img src="images/Photo@2x.png" alt="">
+     <h2>Carolyn Clark</h2>
+     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo</p>
+<!-- TODO: carousel -->
+
+   </div>
+
+  </div>
+
+  <footer>
+    <div id="footer_container">
+    <div id="footer_logo"><img src="images/Logo déclinaison.svg" alt=""></div>
+    <div id="footer_contact">
+      <h2>Location</h2>
+    <p>SnowMount <br> 3979 Marseille Road New York</p>
+  </div>
+    <div>
+      <h2>Contact</h2>
+      <p>(859)749-1380 <br> jessica.lee@mail.com</p>
+
+
+    </div>
+    <div class="socailmedia_container">
+      <img class="socailmedia" src="images/Facebook.svg" alt="">
+      <img class="socailmedia"src="images/Instagram.svg" alt="">
+      <img class="socailmedia" src="images/youtube.svg" alt="">
+    </div>
+</div>
+  </footer>
+  <script>
+function mobile_menu() {
+  
+  document.getElementById("Nav_items_container").style.visibility = 'visible';
+}
+</script>
+</body>
+</html>

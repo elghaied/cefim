@@ -1,0 +1,647 @@
+/* Import des polices Paprika et Alef via Google Fonts */
+@import url(http://fonts.googleapis.com/css?family=Paprika|Alef);
+
+/***********  GÉNÉRALITÉS  *************/
+
+body{
+	/* Utilisation de la police Alef pour tous les textes, Arial sera 
+	appliqué en cas de problème et sans-serif en dernier recours */
+	font-family: 'Alef', Arial, sans-serif;
+	
+	/* Ajout de l'image d'arrière plan au site */
+	background: url('./img/gray_jean.png');
+}
+
+/* Il faut inclure les bordures et les marges internes dans la largeur 
+	pour tous les éléments (cela évite de le faire pour chaque sélecteur).
+*/
+*{
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+/* Utilisation de la police Paprika pour les titres, Georgia et
+	cursive seront utilisées en cas de problème. */
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Paprika', Georgia, cursive;
+}
+
+
+/* Bloc contenant tout le contenu du site*/
+#container{
+	/* Largeur de 960 pixels et centrage du bloc sur la page */
+	width:960px;
+	margin:0 auto;
+	
+	/* Ajout de la couleur d'arrière plan */
+	background-color: #fefefe;
+	
+	/* Marge interne de 50 pixels au contenu du site */
+	padding: 50px;
+}
+
+/*************  EN-TÊTE  ***************/
+
+/* Hauteur de l'en-tête */
+header{
+	height: 130px;
+}
+
+/* Faire flotter le logo à gauche */
+#logo{
+	float: left;
+}
+
+/* Envoyer les icônes des réseaux sociaux à droite */
+#social{
+	float: right;
+}
+
+/* Aligner les icônes horizontalement en les espaçant */
+#social .icon{
+	float: left;
+	margin-left: 5px;
+}
+
+#navigation{
+	/* Éviter que le menu se glisse entre le logo et les icones */
+	clear: both;
+	
+}
+
+#navigation .main-menu{
+	/* Faire disparaitre les puces */
+	list-style-type: none;
+	
+	/* Annuler le style par défaut du navigateur */
+	padding-left: 0; 
+}
+
+/* Mettre les éléments du menu à l'horizontale et les espacer légèrement */
+#navigation .main-menu li{
+	float: left;
+	margin-right: 10px;
+}
+
+/*************  CORPS DE LA PAGE  ***************/
+
+/* Faire en sorte que les blocs de classe "full" s'adaptent à leur contenu
+	même si des blocs flottants sont présents.
+*/
+.full{
+	overflow:auto;
+}
+
+/* Centrage du texte principal */
+.full h1{
+	text-align: center;
+}
+
+/* Classe utilisant la moitié de l'espace disponible et flottement à gauche */
+.half{
+	width: 50%;
+	float: left;
+}
+
+/* Liste des médias
+	indiquer la balise "ul" n'est pas obligatoire mais cela permet de savoir
+	qu'il s'agit d'une liste désordonnée.
+*/
+ul.logo-medias{
+	/* Faire disparaitre les puces */
+	list-style-type: none;
+	
+	/* Annuler le style par défaut du navigateur */
+	padding-left: 0; 
+}
+
+ul.logo-medias li{
+	float:left;
+	margin-right: 25px;
+}
+
+/*************  PIED DE PAGE  ***************/
+
+/* Faire en sorte que la taille du pied de page s'adpate à son contenu flottant */
+footer{
+	overflow:auto;
+}
+
+.third{
+	/* Faire flotter les blocs à gauche */
+	float: left;
+	
+	/* Utiliser un tiers de l'espace disponible */
+	width: 33%;
+	
+}
+
+/*************  FIGNOLAGE ACCUEIL ***************/
+/* Logiquement, ces instructions devraient être placée avec les instructions
+	précédentes pour rassembler les instructions s'appliquant aux éléments
+	proches (en-tête, contenu principal, pied de page, etc.).
+	
+	Pour ne pas trop surcharger le code précédent, j'ai préféré l'inclure
+	ci-dessous.
+*/
+
+#navigation li a {
+	/* Couleur des liens du menu */
+	color: #222222;
+	
+	/* Taille de la police des liens du menu */ 
+	font-size: 20px;
+	
+	/* Se débarasser du soulignement des liens */
+	text-decoration: none;
+	
+	/* Marges internes des liens du menu */
+	padding: 10px 15px;
+}
+
+#navigation li a:hover {
+	/* Couleur des liens du menu */
+	color: #ffffff;
+	
+	/* Couleur d'arrière plan des liens du menu */
+	background-color: #222222;
+}
+
+/* Notez que la hauteur de l'en-tête a déjà été définie plus haut.
+	Toutefois, comme cette nouvelle instruction CSS est située APRES l'autre,
+	c'est l'instruction ci-dessous qui prime.
+*/
+
+header{
+	height:150px;
+}
+
+/* Marges externes supérieures et inférieures pour le contenu principal. */
+#content{
+	margin: 30px 0;
+}
+
+/* Marges internes inférieures */
+.full{
+	padding-bottom:30px
+}
+
+/* Centrage de l'image d'illustration (une classe "illustration" a dû
+	être ajoutée) */
+.half.illustration{
+	text-align: center;
+}
+
+/* Suppression marges externes supérieures des titres */
+h1, h2, h3, h4, h5, h6{
+	margin-top:0;
+}
+
+/* Style du bouton d'action "Essayez maintenant" */
+.boutonaction{
+	text-decoration:none; 		/* Plus de soulignement */
+	border:2px solid black;		/* Bordure noire de 2 pixels */
+	background-color:#fefefe;	/* Couleur d'arrière-plan presque blanche */
+	color:black;				/* Couleur de texte noire */
+	font-size:16px;				/* Police en 16 pixels */
+	padding:10px 20px;			/* Marges internes pour donner du volume */
+	margin-top: 10px;			/* Marge externe supérieure pour décaler
+									le lien vers le bas */
+	display:inline-block;		/* Pour que la propriété précédente fonctionne
+									il faut changer le mode d'affichage par défaut
+									car margin ne s'applique pas aux éléments inline */
+}
+
+/* Nouveau style au survol du bouton */
+.boutonaction:hover{
+	color:#fefefe;
+	background-color: black;
+}
+
+/* Suppression des puces pour les deux listes désordonnées du plan de site */
+ul#sitemap,
+ul#sitemap ul{
+	list-style:none;
+}
+
+/* Suppression de la marge interne gauche par défaut */
+ul#sitemap{
+	padding-left:0;
+}
+
+/* Liens du plan de site en noir */
+ul#sitemap a{
+	color:black;
+}
+
+/* Plus de soulignement au survol des liens du plan de site */
+ul#sitemap a:hover{
+	text-decoration:none;
+}
+
+/*************  BLOG  ***************/
+
+/* Contenu principal (blog)*/
+#maincontent {
+	/* Flottement à gauche */
+	float: left;
+	/* Largeur de 66% */
+	width: 66%;
+	/* Marge interne droite de 20 pixels */
+	padding-right: 20px;
+}
+
+/* Barre latérale */
+#sidebar{
+	/* Flottement à gauche */
+	float: left;
+	/* Largeur de 33% */
+	width: 33%;
+	/* Marge interne gauche de 20 pixels */
+	padding-left: 20px
+}
+
+/* Correction de la hautur du bloc à cause des éléments flottants précédents */
+#content{
+	overflow:auto;
+}
+
+/* Flottement à gauche des l'images à la une et ajout de marges externes 
+	droites et inférieures */
+.post .featured{
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+/* Correction de l'affichage des articles lié au flottement des images */
+.post{
+	overflow:auto;
+	margin-bottom: 20px;
+}
+
+/* Styles créés à partir de l'image d'exemple */
+
+/* Ajout d'une marge externe inférieure de 50px pour aérer la mise en page*/
+#maincontent h1{
+	margin-bottom: 50px;
+}
+
+.post h2 {
+	margin-bottom: .5em;
+}
+
+/* Coloration des titres des articles en gris foncé (presque noir) et désactivation
+	du soulignement automatique par le navigateur.
+*/
+.post h2 a{
+	color: black;
+	text-decoration: none;
+}
+
+/* Au survol, les titres deviennent bleus et ne doivent pas être soulignés */
+.post h2 a:hover{
+	color: #0e6bce;
+	text-decoration:none;
+}
+
+/* Tous les liens du contenu principal doivent être bleus (#0e6bce)
+	et ne pas être soulignés.
+*/
+.post a,
+#sidebar a,
+#precsuiv a{
+	color: #0e6bce;
+	text-decoration: none;
+}
+
+/* Au survol, tous les liens du contenu principal doivent être soulignés */
+.post a:hover,
+#sidebar a:hover,
+#precsuiv a:hover{
+	text-decoration: underline;
+}
+
+/* Transparence des images au survol */
+.post .featured:hover{
+	opacity:0.7;
+}
+
+/* Suppression marge supérieure des paragraphes des articles */
+
+.post p {
+	margin-top: 0;
+	margin-bottom: .5em;
+}
+
+/* Date des articles */
+
+.post .meta {
+	font-size: 12px;
+	margin-bottom: .5em;
+}
+
+/* Barre latérale */
+
+/* Ajout d'une marge externe inférieure pour compenser la suppression de
+	la marge externe supérieure des titres des widgets (pour les espacer
+	un peu)
+*/
+.widget{
+	margin-bottom: 30px;
+}
+
+/* Formulaire de newsletter */
+
+/* Spécifiquement pour le champ email */
+.widget input[type='email']{
+	line-height: 30px;		/* Hauteur de ligne de 30 pixels*/
+	width:100%;				/* Largeur de 100% du bloc parent */
+	max-width: 300px;		/* Largeur maximale de 300 pixels */
+	font-size: 14px;		/* Texte de 14 pixels */
+	text-align: center;		/* Centrage du texte */
+}
+
+/* Bouton de validation (auquel on a attribué la classe boutonaction) */
+.widget input[type='submit']{
+	cursor:pointer;			/* On affiche un curseur de type lien */
+	width:100%;				/* Largeur de 100% du bloc parent */
+	max-width: 300px;		/* Largeur maximale de 300 pixels */
+}
+
+/* Image du widget À propos */
+.widget.about img{
+	float:left;
+	margin-right: 15px;
+}
+
+/*************  ARTICLE  ***************/
+
+/* Alignement à droite des images dotées de la classe "alignright" */
+.alignright{
+	float: right;
+	margin-left:10px; 		/* Marge externe gauche pour éviter que le texte
+								touche les images */
+}
+
+/* Alignement au centre des images dotées de la classe "aligncenter" */
+.aligncenter{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;	/* Marge externe supérieure et inférieure pour éviter que le texte
+								touche les images */
+}
+
+#maincontent .post h1{
+	margin-bottom:30px;		/* Réduction de la marge externe inférieure (car
+								50px ont été définis plus haut pour tous les
+								titres. Ici cela ne concerne que les titres h1
+								des articles. */
+	font-size: 32px;		/* Taille du titre plus importante */
+}
+
+/*************  CONTACT  ***************/
+
+/* Curseur de type lien pour le bouton de validation */
+input[type='submit']{
+	cursor:pointer;
+}
+
+/* Pour les champs monolignes */
+input[type='text'],
+input[type='email'],
+textarea{
+	line-height: 30px;		/* avoir une hauteur de ligne de 30 pixels*/
+	width: 250px;			/* dois-je encore vous dire ce que cette propriété signifie ? :) */
+	font-size: 14px;		/* Taille de police de 14 pixels pour les champs du formulaire */
+	border:1px solid #ccc; 	/* Jolie bordure grise sur les éléments d'un formulaire */
+}
+
+/* Ajustement de la taille de champ de message */
+textarea{
+	width:400px;
+	height:200px;
+}
+
+/*************  RESPONSIVE  ***************/
+
+/* Lorsque la largeur de l'écran est inférieure à 1000px */
+@media only screen and (max-width:1000px){
+	
+	/* La largeur maximale du site passe à 720 pixels */
+	#container{
+		max-width:720px;
+	}
+	
+	/** BLOG **/
+	
+	#maincontent,
+	#sidebar{
+		float:none;		/* Suppression du flottement */
+		width:100%;		/* Largeur étendue à la totalité du bloc parent */
+		padding:0;		/* Suppression de la marge interne */
+	}
+	
+	/* Ajout d'une marge externe supérieure pour espacer la barre latérale */
+	#sidebar{
+		margin-top:50px; 
+	}
+	
+	/* Définition de la hauteur des éléments du formulaire de newsletter */
+	.widget input[type='email'],
+	.widget input[type='submit']{
+		height: 42px;	
+	}
+	
+	/* Suppression de la marge externe supérieure (car les champs sont côte à côte) */
+	.widget input[type='submit']{
+		margin-top:0;
+	}
+}
+
+/* Lorsque la largeur de l'écran est inférieure à 800px */
+@media only screen and (max-width:800px){
+	
+	/* Expliqué précédemment */
+	#container{
+		max-width:500px;
+	}
+	
+	/* Hauteur automatique pour ne plus avoir une hauteur fixe (150px) */
+	.header{
+		height:auto;
+	}
+	
+	/* Suppression du flottement */
+	#logo{
+		float:none;
+	}
+	
+	/* Suppression du flottement et centrage */
+	#social{
+		float:none;
+		text-align:center;
+	}
+	
+	/* Suppression du flottement et changement de type d'élément */
+	#social .icon{
+		display:inline-block;
+		float:none;
+	}
+	
+	/* Centrage */
+	#navigation{
+		text-align: center;
+	}
+	
+	/* Adaptation des éléments du menu */
+	#navigation .main-menu li{
+		float: none;				/* Suppression du flottement */
+		display: inline-block;		/* Changement de type d'élément */
+		padding: 10px 0;			/* Ajout d'une marge interne supérieure et inférieure */
+		margin-right:0;				/* Suppression des marges externes */
+	}
+	
+	/* Expliqué précédemment */
+	.half{
+		float:none;
+		width:100%;
+	}
+	
+	/* Centrage des textes */
+	.half h2,
+	.half p,
+	.half ol{
+		text-align:center;
+	}
+	
+	.half ol{
+		list-style-position: inside;	/* Position des numéros */
+		padding: 0;						/* Suppression des marges internes */
+	}
+	
+	/* Expliqué précédemment */
+	.full h2,
+	ul.logo-medias{
+		text-align: center;
+	}
+	
+	/* Expliqué précédemment */
+	ul.logo-medias li {
+		float: none;
+		margin: 0 10px 10px;
+		display: inline-block;
+	}
+	
+	/* Expliqué précédemment */
+	footer .third{
+		float:none;
+		width:100%;
+		text-align:center;
+	}
+	
+	/* Expliqué précédemment */
+	footer .third ul{
+		list-style-position:inside;
+		padding:0;
+	}
+	
+	/** BLOG **/
+	
+	/* Ajout d'une marge externe inférieure */
+	.post{
+		margin-bottom:30px;
+	}
+	
+	/* Réduction de la taille des images */
+	.post .featured{
+		width: 130px;
+		height: auto;
+	}
+	
+	
+	/* Expliqué précédemment */
+	#sidebar .widget{
+		text-align:center;
+	}
+	
+	/* Expliqué précédemment */
+	.widget input[type='submit']{
+		margin-top:10px;
+	}
+	
+	/* Expliqué précédemment */
+	#sidebar .widget ul{
+		list-style-position:inside;
+		padding:0;
+	}
+	
+	/* Expliqué précédemment */
+	.widget.about p{
+		text-align:left;
+	}
+	
+	/** ARTICLE **/
+	
+	/* La gestion des images se fait plus finement dans un thème WordPress, ceci
+		n'est doné qu'à titre d'exemple */
+	
+	.post .alignright{
+		width:auto;			/* Largeur automatique */
+		float:none;			/* Expliqué précédemment */
+		margin:0 0 20px;	/* Expliqué précédemment */
+		display:block;		/* Changement de type d'élément. Le type "block" permet
+								à l'élément image de s'étendre sur toute la largeur.
+							*/
+	}
+	
+}
+
+/* Lorsque la largeur de l'écran est inférieure à 500px */
+@media only screen and (max-width:500px){
+	
+	/* On supprime la marge attribuée automatiquement à la balise body
+		par le navigateur */
+	body{
+		margin:0;
+	}
+	
+	/* Expliqué précédemment */
+	#container{
+		width:100%;
+		padding:20px;
+	}
+	
+	/* Adaptation de la taille de l'image pour les petits écrans */
+	#logo img{
+		max-width: 100%;
+		height:auto;
+	}
+	
+	/* On masque les liens vers les réseaux sociaux */
+	#social{
+		display:none;
+	}
+	
+	/* Réduction de la taille des titres de niveau 1 */
+	h1{
+		font-size: 30px;
+	}
+	
+	/** BLOG **/
+	
+	.post .featured{
+		float:none;		/* Suppression du flottement */
+		width:auto;		/* Retour à la taille par défaut de l'image */
+	}
+	
+	/** CONTACT **/
+	
+	/* Limitation de taille des champs de formulaire */
+	input[type='text'],
+	input[type='email'],
+	textarea{
+		max-width:100%;
+	}
+}

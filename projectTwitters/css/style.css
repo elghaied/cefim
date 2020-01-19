@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen&display=swap');
+:root{
+    --Darkblueish: #20325a;
+    --Blueish: #3d619b;
+    --redish: #ef4b4c;
+    --greyish: #e9e9eb;
+    --myPadding: 2rem 1rem;
+}
+body {
+    padding:0;
+    margin: 0;
+}
+
+header {
+    height: 4rem;
+    background-color: #e9e9eb;
+    box-shadow: 1px 3px 5px 1px grey;
+    display: flex;
+    justify-content: end;
+    align-items:center;
+    
+}
+
+nav .nav-items {
+    text-decoration: none;
+    color: rgb(80, 74, 74);
+    padding: 1rem;
+    text-transform: capitalize;
+    text-shadow: grey;
+    font-family: serif;
+}
+/* ["orange","red","blue","purple","darkgreen","lemoni","blood","darkblue"]; */
+
+/* buttons library */
+.orange {
+    background-color: #f88800;
+    border: 2px solid #40b0e0;
+}
+.red {
+    background-color: #c80000;
+    border: 2px solid #a860c8;
+}
+.blue {
+    background-color: #0070a8;
+    border: 2px solid #98c800;
+}
+.purple {
+    background-color: #7010a8;
+    border: 2px solid #f8b840;
+}
+.darkgreen {
+    background-color: #407000;
+    border: 2px solid #f84040;
+}
+.lemoni {
+    background-color: #d86000;
+    border: 2px solid #0098c8;
+}
+.blood {
+    background-color: #a80000;
+    border: 2px solid #9830c8;
+}
+.darkblue {
+    background-color: #609800;
+    border: 1px solid #005088;
+
+}
+
+.container {
+    padding: 4rem;
+    position: relative;
+
+}
+.inputRow {
+    display:flex;
+    justify-content: center;
+    padding-right:4rem;
+    padding-left:4rem;
+    flex-wrap: wrap;
+}
+.row {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr;
+
+    grid-template-areas: "leftside rightside";
+}
+
+#spinner {
+    align-self: flex-end;
+    text-align: center;
+    text-transform: capitalize;
+    color: gray;
+    transition: 2s;
+}
+
+.left-col {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    grid-area: leftside;
+    
+}
+.right-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    grid-area: rightside;
+}
+
+/* trending */
+.title {
+    display: block;
+    font-size: 2rem;
+    background-color: grey;
+    text-align: center;
+}
+#trends {
+    background-color: #005088;
+    width: 100%;
+    color:rgb(201, 201, 201);
+    padding: 0 1rem;
+    
+    
+}
+#influenceurs {
+    background-color: #a80000;
+    width: 100%;
+    height: 5rem;
+    padding: 0 1rem;
+ 
+}
+
+.items {
+    padding: 0rem 2rem;
+    padding-bottom: 3rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    color:white;
+    font-family: 'Oxygen', sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    height: 6rem;
+    width:10rem;
+    /* display: flex; */
+
+}
+.items p {
+   height: 70%;
+   width: 70%;
+   overflow: hidden;
+
+}
+
+.userId {
+    position: absolute;
+    bottom: 1.2rem;
+    right: 2px;
+}
+.btn-ok {
+    padding: 1rem 2rem;
+    border-radius: .8rem;
+    margin-left:1rem;
+}
+
+/* Icons */
+
+.delete {
+    position: absolute;
+    width: 1rem;
+    right: 1px;
+    top: 1px;
+    visibility: hidden;
+    
+}
+
+.modify {
+    position: absolute;
+    width: 1rem;
+    left: 2px;
+    top: 2px;
+    visibility: hidden;
+}
+.expand {
+    position: absolute;
+    width: 1rem;
+    right: 2px;
+    bottom: 2px;
+    visibility: hidden;
+}
+
+.modfiytext {
+    width : 100%;
+}
+
+.comments{
+    position: absolute;
+    bottom: 1px;
+    width: 3rem;
+    left: 2rem;
+    visibility: hidden;
+}
+
+
+.like {
+    position:absolute;
+    bottom: 1px;
+    width: 3rem;
+    right: 1.5rem;
+    visibility: hidden;
+    
+}
+.dislike {
+    position:absolute;
+    bottom: 1px;
+    width:2rem;
+    right: 6rem;
+    visibility: hidden;
+}
+.dislike img,  .like img, .comments img{
+    max-width: 1rem;
+    
+}
+.visited {
+    position:absolute;
+    
+    bottom: 1px;
+    width:1rem;
+    left: 2px;
+    visibility: hidden;
+}
+p {
+    word-wrap: break-word;
+}
+
+.modal {
+    position: absolute;
+    top: 0vw;
+    left: 0vw;
+    width: 0vh;
+    height: 0vh;
+    background-color: #20325a;
+    border: 1px solid black;
+    transition: 1s;
+    z-index: 10;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 40vh;
+    
+}
+
+
+/* comment section */
+
+.close {
+    max-width:1.2rem;
+    position: absolute;
+    right:.5rem;
+    top:.5rem;
+
+}
+
+.close:hover {
+    background-color: rgba(255, 255, 255, 0.767);
+    padding: .3rem;
+    border-radius: 25px ;
+}
+
+.post {
+    margin-bottom: 4rem;
+    width:0vw;
+    padding: 2rem;
+    box-shadow: inset 1px 1px grey;
+    min-height: 5rem;
+    background-color:#e9e9eb;
+    margin-top: 2rem;
+    transition: 1s;
+    word-wrap: break-word;
+    overflow: hidden;
+    
+    
+    
+}
+.comment_container {
+    background-color: #3d619b;
+    display: grid;
+    grid-template-areas: "user . ."
+    "comment . button";
+    padding: 2rem;
+    gap: .5rem;
+    width: 0vw;
+    transition: 1s;
+}
+.comment_user {
+    grid-area: user;
+    width: 0vw;
+    transition: 1s;
+
+}
+.comment_text {
+    grid-area: comment;
+    width: 0vw;
+    transition: 1s;
+}
+.comment_button {
+    grid-area: button;
+    transition: 1s;
+    background-color: #ef4b4c;
+    font-size: 2rem;
+    color: var(--greyish);
+}
+
+.comment_area {
+    background-color: var(--Darkblueish);
+    width:0vw;
+    transition: 1s;
+    
+}
+.new_comment {
+    background-color: var(--Blueish);
+    margin: 1rem;
+    padding: 1rem 1rem;
+    min-height: 2rem;
+    position: relative;
+    transition: 1s;
+    
+    
+}
+.timer {
+    left: 1rem;
+    bottom: 0;
+    position: absolute;
+    color: white;
+    font-style: italic;
+}
+.username {
+    
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    color: white;
+    transition: 1s;
+
+}

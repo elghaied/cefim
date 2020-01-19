@@ -1,0 +1,216 @@
+body{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    justify-content: center;
+    position: relative;
+    color: rgb(92, 67, 13);
+    color:white;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.671);
+    text-transform: uppercase;
+
+
+}
+
+ul {
+    list-style: none;
+}
+
+/* pyramid shap */
+.sides {
+    display: grid;
+    grid-template-areas: ". right" "left .";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    transform: rotate(45deg);
+    border: 2px solid
+    black;
+    height: 300vh;
+    width: 300vh;
+    justify-self: center;
+    margin-top: -150vh;
+   
+}
+.right {
+    grid-area: right;
+    border-bottom: 1px solid rgb(248, 252, 212);
+    background-image: url("img/sidebg.jpg");
+    background-size: 30%;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.692);
+
+}
+
+/* to protect the sides when the screen hieght is too low  */
+.right:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:-150vh;
+    left:300vh;
+    z-index: -1;
+    background-image: url("img/sidebg.jpg");
+    background-size: 30%;
+}
+.left {
+    grid-area: left;
+    border-right: 4px solid rgba(0, 0, 0, 0.637);
+    background-image: url("img/sidebg.jpg");
+    background-size: 30%;
+    box-shadow: 20px 0px 30px rgba(14, 14, 14, 0.493);
+
+}
+/* to protect the sides when the screen hieght is too low  */
+
+.left:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:-150vh;
+    z-index: -1;
+    background-image: url("img/sidebg.jpg");
+    background-size: 30%;
+}
+
+
+/* the tweets container */
+.pyContainer {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: -10;
+    background-color: rgb(242, 247, 174);
+    display: grid;
+    flex-direction: column; 
+    justify-items: center;
+    top: 20px;
+
+     
+    
+}
+/* Rows */
+
+.pyRows{
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-self: stretch;
+    
+    
+}
+
+
+/* 
+.pyContainer :nth-child(1){
+    width: 20%;
+    grid-area: 1;
+}
+.pyContainer :nth-child(2){
+    width: 30%;
+    grid-area: 2;
+}
+.pyContainer :nth-child(3){
+    width: 50%;
+    grid-area: 3;
+}
+.pyContainer :nth-child(4){
+    width: 70%;
+    grid-area: 4;
+}
+.pyContainer :nth-child(5){
+    width: 80%;
+    grid-area: 5;
+}
+
+.pyContainer :nth-child(6){
+    width: 100%;
+    grid-area: 6;
+}
+.pyContainer :nth-child(7){
+    width: 100%;
+    grid-area: 7;
+}    */
+
+
+
+.pyItems {
+    grid-area: pyItem;
+    background-color: rgb(221, 191, 20);
+    border: 2px solid rgb(184, 142, 6);
+    color: white;
+    font-size: .7rem;
+    
+
+
+}
+
+/* the left and the right sides containers  */
+.leftInfo {
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.categorize {
+    background-color: brown;
+    width: 10rem;
+    height: 4rem;
+    padding: 1rem;
+}
+.categorize a {
+    color: white;
+    text-decoration: none;
+    margin: .5rem;
+}
+
+.rightInfo {
+    width: 40%;
+    height: 100vh;
+    display: flex;
+
+    padding-right: 2rem;
+    padding-top: 2rem;
+    position: absolute;
+    display: flex;
+    justify-self: self-end;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.profile {
+    display: flex;
+    flex-direction: row;
+    max-height: 6rem;
+    justify-content: flex-start;
+    width: 90%;
+}
+
+.pic img{
+    max-height: 6rem;
+    border: 1px solid black;
+
+}
+/* input form */
+
+.formContainer {
+    left: 0;
+    height: auto;
+}
+#myInput {
+    height: 5rem;
+    width: 60%;
+}
+
+.rows {
+    margin-bottom: 2rem;
+}
+
+#btnOK {
+    left:0px;
+}
